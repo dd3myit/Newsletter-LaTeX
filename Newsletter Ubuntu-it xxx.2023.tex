@@ -1,0 +1,335 @@
+\documentclass[a4paper,twoside]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[italian]{babel}
+
+\usepackage{graphicx}
+\usepackage{wrapfig} 
+\usepackage[labelformat=empty]{subfig}
+
+\usepackage{emptypage}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{siunitx}
+\usepackage{booktabs}
+\usepackage{bm}
+\usepackage{hyperref}
+\hypersetup{
+			colorlinks=true,
+			linkcolor=blue,
+			anchorcolor=magenta,
+			citecolor=blue,
+			urlcolor=blue,
+}
+\usepackage[hypertext]{cdpaddon}
+\usepackage[dvipsnames]{xcolor}
+	\definecolor{ubuntuarancio}{RGB}{233, 84, 32} 
+	\definecolor{Mycolor2}{HTML}{E95420}
+
+\usepackage{fancyhdr}
+	\pagestyle{fancy}
+	\fancyhead{}
+	\fancyhead[RO,LE]{\textit{Newsletter Ubuntu-it N.001, Gennaio 2023}}
+	\renewcommand{\headrulewidth}{0.4pt}
+	\renewcommand{\footrulewidth}{0.4pt}
+
+\begin{document}
+
+\begin{titlepage} 
+\parbox{0.83\textwidth}{%
+	\smash{\textcolor{ubuntuarancio}{\rule[-\textheight]{15pt}{\textheight}}}\hfill 
+\parbox[b][\textheight]{0.75\textwidth}{\centering
+		\includegraphics[width=0.8\textwidth]{immagini/newlogo1.png}
+		\vspace{1\baselineskip}
+		
+		\textbf{\Huge Newsletter Ubuntu-it}\vspace{0.5\baselineskip}
+
+		\textbf{\Large Numero 001 - Anno 2023}\vspace{0.5\baselineskip}		
+		
+		\textit{\large Gruppo Social Media}
+		
+		\vspace{\stretch{1}}		
+		\url{https://wiki.ubuntu-it.org/GruppoPromozione/}\vspace{\baselineskip}
+		\makebox[\linewidth]{2023}
+}}
+\end{titlepage}
+\clearpage
+\hfill
+\vfill
+\pdfbookmark[0]{Colophon}{colophon}
+\thispagestyle{empty}
+\section*{Licenza}
+Il presente documento e il suo contenuto è distribuito con licenza \textbf{Creative Commons 4.0 di tipo “Attribuzione - Condividi allo stesso modo”}. \'E possibile, riprodurre, distribuire, comunicare al pubblico, esporre al pubblico, rappresentare, eseguire o recitare il presente documento alle seguenti condizioni:
+
+\begin{itemize}
+\item \textbf{Attribuzione} - Devi riconoscere una menzione di paternit\'a adeguata, fornire un link alla licenza e indicare se sono state effettuate delle modifiche. Puoi fare ciò in qualsiasi maniera ragionevole possibile, ma con modalit\'a tali da suggerire che il licenziante avalli te o il tuo utilizzo del materiale.
+\item \textbf{Stessa Licenza} - Se remixi, trasformi il materiale o ti basi su di esso, devi distribuire i tuoi contributi con la stessa licenza del materiale originario.
+\item \textbf{Divieto di restrizioni aggiuntive} - Non puoi applicare termini legali o misure tecnologiche che impongano ad altri soggetti dei vincoli giuridici su quanto la licenza consente loro di fare.
+\end{itemize}
+
+Un riassunto in italiano della licenza è presente a questa $\href{https://creativecommons.org/licenses/by-sa/4.0/it/}{\textsl{pagina}}$. Per maggiori informazioni:
+
+\begin{center}
+$\href{http://www.creativecommons.org}{\texttt{http://www.creativecommons.org}}$
+\end{center}
+
+Questo documento è stato composto interamente dall'autore con \LaTeX. Per maggiori informazioni, o segnalazioni:
+
+\begin{flushleft}
+$\href{http://liste.ubuntu-it.org/cgi-bin/mailman/listinfo/newsletter-italiana}{\textsl{Mailing List Newsletter-italiana}}$: iscriviti per
+ricevere la Newsletter Italiana di Ubuntu!;\\
+$\href{http://liste.ubuntu-it.org/cgi-bin/mailman/listinfo/newsletter-ubuntu}{\textsl{Mailing List Newsletter-Ubuntu}}$: la redazione della newsletter italiana. Se vuoi collaborare alla realizzazione della newsletter, questo è lo strumento giusto con cui contattarci.\\
+\textbf{Canale IRC}: $\href{https://chat.ubuntu-it.org/#ubuntu-it-promo}{\textsl{$\#$ubuntu-it-promo}}$
+\end{flushleft}
+
+\begin{flushright}
+A cura di:\\
+\textbf{Daniele De Michele}
+\end{flushright}
+
+\clearpage
+\thispagestyle{empty}
+\begin{figure}[!h]
+\centering
+\includegraphics[width=0.2\textwidth]{immagini/newlogo2.png}
+\end{figure}
+\begin{center}
+\textbf{\Huge Newsletter Ubuntu-it}\vspace{\baselineskip}
+\end{center}
+\tableofcontents
+
+\cleardoublepage
+
+\begin{figure}[!h]
+\centering
+\includegraphics[width=0.7\textwidth]{immagini/newlogo1.png}
+\end{figure}
+\vspace{0.30cm}
+Questo è il numero \textbf{1} del \textbf{2023} della Newsletter di Ubuntu-it, riferito alla settimana che va da \textbf{lunedì 9 Gennaio} a \textbf{domenica 16 Gennaio}. Per qualsiasi commento, critica o  lode, contattaci attraverso la $\href{http://liste.ubuntu-it.org/cgi-bin/mailman/listinfo/facciamo-promozione}{\textsl{mailing list}}$ del $\href{https://wiki.ubuntu-it.org/GruppoPromozione}{\textsl{gruppo}}$ $\href{https://wiki.ubuntu-it.org/GruppoPromozione}{\textsl{promozione}}$.
+
+
+\section{Notizie da Ubuntu}
+\subsection{Xubuntu 23.04 offrirà un'immagine minimal ufficiale}
+Con l'avvio del ciclo di sviluppo di \textbf{Ubuntu 23.04}, si sta imparando sempre di più su quali saranno le novità in serbo per la prossima release ufficiale firmata \textbf{Canonical}. Infatti, a quanto pare, la famiglia si allargherà ulteriormente con una nuova release, perché la derivata \textbf{Xubuntu}, uno degli spin più minimal in termini di distribuzioni GNU/Linux, ha rivelato la sua intenzione di rilasciare una nuova immagine "Xubuntu Minimal" a partire dalla versione 23.04. Questa iniziativa è partita nel lontano 2015 da un'espansione dello sforzo di creare Xubuntu Core, un'immagine che non includeva tutte le funzionalità aggiuntive di un desktop completo e moderno. Essenzialmente fornito solo con Xfce e l'aspetto di base di Xubuntu, quindi niente suite per l'ufficio, lettori multimediali, eccetera. In un post sulla mailing list degli sviluppatori di Ubuntu, \textit{Steve Langasek} riprende questa iniziativa $\href{https://lists.ubuntu.com/archives/ubuntu-release/2023-January/005521.html}{\textsl{affermando}}$ che l'immagine di  Xubuntu Minimal mette in parallelo gli obiettivi minimi di installazione per le esistenti immagini di Ubuntu Desktop e Ubuntu Server, per fornire un footprint di installazione ridotta senza nessuna applicazione. \textbf{Xubuntu Minimal} sarà reso disponibile come download separato e continuerà ad utilizzare il programma di installazione di Ubiquity e non richiederà alcuna connessione Internet attiva. E, giusto per rendere l'idea di quanto appena scritto, si badi che attualmente, l'immagine di installazione "full fat" di Xubuntu 22.10 è attualmente di \SI{2,8}{GB}, che è ben oltre il limite di dimensione per un CD, quindi ci sarà un bel lavoro da fare per cercare di raggiungere questi obiettivi. Per il momento non vi sono altre novità, perciò rimanete sintonizzati per saperne di più! \\
+\\
+\textit{Fonte}:\\
+$\href{https://www.omgubuntu.co.uk/2023/01/xubuntu-23-04-will-come-in-a-cd-rom-size-minimal-image}{\textsl{omgubuntu.co.uk}}$
+
+\subsection{Nuovi aggiornamenti di sicurezza per il Kernel Linux}
+Il nuovo anno inizia con il botto. Infatti, durante le vacanze il team di sicurezza di Canonical ha reso disponibili dei nuovi aggiornamenti di sicurezza per il Kernel Linux atti a patchare alcune vulnerabilità di sicurezza presenti in tutte le versioni di Ubuntu supportate, vale a dire Ubuntu 22.10, 22.04 LTS, 20.04 LTS, 18.04 LTS, 16.04 ESM e 14.04 ESM. Con questo aggiornamento si è cercato di risolvere:
+
+\begin{itemize}
+\item due falle nella tecnologia Bluetooth, una scoperta da Tamás Koczkavale ($\href{https://ubuntu.com/security/CVE-2022-42896}{\textsl{CVE-2022-42896}}$) nell'implementazione dell'handshake Bluetooth $\href{https://en.wikipedia.org/wiki/List_of_Bluetooth_protocols}{\textsl{L2CAP}}$, e una seconda vulnerabilità di overflow di numeri interi scoperta nel sottosistema Bluetooth ($\href{https://ubuntu.com/security/CVE-2022-45934}{\textsl{CVE-2022-45934}}$). Queste vulnerabilità potrebbero consentire a un utente malintenzionato fisicamente vicino al dispositivo di causare un arresto anomalo del sistema o persino eseguire codice arbitrario;
+\item un problema di sicurezza ($\href{https://ubuntu.com/security/CVE-2022-3643}{\textsl{CVE-2022-3643}}$) scoperto nel driver netback Xen, che consente a un utente malintenzionato in una macchina virtuale guest di causare un Denial of service;
+\end{itemize}
+
+Questi problemi riguardano tutte le versioni di Ubuntu supportate. Mentre, per i soli sistemi \textbf{Ubuntu 22.10} che eseguono il kernel Linux 5.19 e i sistemi Ubuntu \textbf{22.04 LTS} e \textbf{Ubuntu 20.04 LTS} che eseguono il kernel Linux 5.15 LTS, il nuovo aggiornamento patcha un $\href{https://it.wikipedia.org/wiki/Buffer_overflow}{\textsl{buffer overflow}}$ ($\href{https://ubuntu.com/security/CVE-2022-4378}{\textsl{CVE-2022-4378}}$) scoperto da Kyle Zeng nell'implementazione di $\href{https://en.wikipedia.org/wiki/Sysctl}{\textsl{sysctl}}$. Questa vulnerabilità potrebbe consentire a un utente malintenzionato locale di causare l'esecuzione di codice arbitrario e manomettere così il sistema.
+
+Invece, solo per i sistemi \textbf{Ubuntu 20.04 LTS} che eseguono il kernel Linux 5.4 LTS, così come i sistemi Ubuntu \textbf{18.04 LTS}, \textbf{16.04 ESM} e \textbf{14.04 ESM} che eseguono il kernel Linux 4.15, è stato rilevato un $\href{https://it.wikipedia.org/wiki/Buffer_overflow}{\textsl{buffer overflow}}$ ($\href{https://ubuntu.com/security/CVE-2022-43945}{\textsl{CVE-2022-4395}}$) nell'implementazione NFSD, che potrebbe consentire a un utente malintenzionato remoto di causare un arresto anomalo del sistema. Come sempre, Canonical esorta tutti gli utenti in possesso di una versione di Ubuntu ad aggiornare il prima possibile i propri sistemi. Per aggiornare la propria distribuzione basterà aprire una finestra di terminale e digitare i seguenti comandi:
+
+\begin{verbatim}
+sudo apt update
+sudo apt full-upgrade
+\end{verbatim}
+
+\noindent \textit{Fonte}:\\
+$\href{https://9to5linux.com/new-ubuntu-kernel-security-updates-fix-5-vulnerabilities-patch-now}{\textsl{9to5linux.com}}$
+
+
+\subsection{Unity 7.7 e il tanto atteso supporto Wayland}
+Il manutentore dell'ambiente desktop \textbf{Unity}, Rudra Saraswat, ha annunciato in questo ore tutti i dettagli riguardanti l'implementazione di UnityX, una variante del desktop Unity7 con funzionalità extra e supporto per le nuove tecnologie GNU/Linux. Per la cronaca e per chi non lo sapesse, \textbf{UnityX} (precedentemente rinominato UnityX 10) è stato inizialmente progettato per essere la prossima versione principale dell'ambiente desktop di \textbf{Ubuntu Unity}. Tuttavia, secondo alcuni leak, sembrerebbe che UnityX sia entrato in fase di sviluppo proprio per sostenere il rilascio di \textbf{Unity 7.7}, che a quanto pare offrirà agli utenti molte più opzioni di personalizzazione, come la possibilità di utilizzare un gestore di finestre a propria scelta (come per esempio Wayland), sostituire o rimuovere il pannello superiore, nonché la possibilità di regolare l'opacità di Unity Dash e del Launcher. Il tutto verrà gestito dall'applicazione "Impostazioni di sistema", che consentirà di modificare la maggior parte delle impostazioni del desktop, ma anche di sostituire i vari componenti che non si utilizzano o che semplicemente non piacciono. Detto questo, sia \textbf{UnityX} sia \textbf{Unity 7.7} verranno spediti come parte della prossima versione di \textbf{Ubuntu Unity 23.04 (Lunar Lobster)},  che avverrà a fine Aprile. Per questo motivo, fino ad allora, tutti quelli che vogliono testarlo in anteprima possono seguire le istruzioni dettagliate fornite dallo stesso sviluppatore sulla $\href{https://gitlab.com/ubuntu-unity/unity-x/unityx#manual-installation}{\textsl{pagina}}$ \textbf{GitLab} del progetto.\\
+\\
+\textit{Fonte}:\\
+$\href{https://9to5linux.com/unity-7-7-desktop-environment-to-get-a-unityx-flavor-with-wayland-support}{\textsl{9to5linux.com}}$
+
+\subsection{Apre il concorso per gli sfondi di Ubuntu 23.04 "Lunar Lobster"}
+Il team di Ubuntu ha lanciato un appello a tutti gli internauti, artisti, grafici e fan di Ubuntu provenienti da tutto il mondo per inviare i propri lavori e aggiudicarsi così l'onore di vedere la propria opera d'arte all'interno di uno dei più famosi sistemi operativi GNU/Linux. A soli tre mesi e mezzo dal rilascio ufficiale di \textbf{Ubuntu 23.04} (dovrebbe esser rilasciata ad Aprile), gli sviluppatori di \textbf{Ubuntu} hanno bisogno del vostro aiuto per fornire un altro bellissimo set di sfondi per la prossima release. Pertanto, se stai leggendo questo articolo, sei invitato a presentare la tua opera d'arte al concorso ufficiale. La finestra di presentazione si è aperta il 10 gennaio 2023 e lo rimarrà fino al 6 febbraio. In altre parole, devi sbrigarti, perché hai solamente circa tre settimane per inviare la tua candidatura. Tuttavia, tieni presente che solo i primi cinque classificati saranno inclusi nella versione Lunar Lobster, dopo che i membri della comunità Ubuntu avranno votato per i rispettivi lavori, dal 6 al 17 febbraio. Dovresti anche tenere a mente alcune delle regole per partecipare al concorso, tra cui:
+
+\begin{itemize}
+\item devi detenere i diritti sull'immagine che stai inviando;
+\item le immagini inviate devono essere di alta qualità e in formato 4K (3840 x \SI{2160}{px}); 
+\item è necessario utilizzare la licenza CC BY-SA 4.0 o CC BY 4.0.
+\end{itemize}
+
+Maggiori $\href{https://discourse.ubuntu.com/t/lunar-lobster-23-04-wallpaper-competition/33132}{\textsl{dettagli}}$ sono disponibili nel thread dell'invito per partecipare al concorso. I vincitori saranno annunciati il 18 febbraio 2023 e gli sfondi scelti verranno inviati al team di packaging per l'inclusione in Ubuntu 23.04.\\
+\\
+\textit{Fonte}:\\
+$\href{https://9to5linux.com/ubuntu-23-04-lunar-lobster-wallpaper-competition-opens-for-entries}{\textsl{9to5linux.com}}$
+
+
+\subsection{Come installare il Kernel Linux 6.1 su Ubuntu 22.10}
+Buone notizie per tutti gli utenti che usufruisco della distribuzione \textbf{Ubuntu}, in quanto ora è possibile installare l'ultima versione del kernel Linux, la \textbf{6.1}. Infatti, con il rilascio avvenuto durante la settimana da parte di \textit{Linus Torvalds}, ora gli utenti possono godere di molte fantastiche funzionalità, come un miglior supporto hardware, oltre che svariate correzioni di sicurezza, che permettono di migliorare l'esperienza desktop e renderla più sicura, veloce e affidabile. Ma perché dover aggiornare il proprio kernel, se tutto sommato il proprio sistema funziona correttamente? La risposta a tale domanda è molto semplice, in quanto si aggiorna il kernel della propria distribuzione esclusivamente se si ha bisogno di una o più funzionalità (introdotte con la nuova versione) che permettono di utilizzare un componente hardware nel migliore dei modi. Per questo, oggi, con questo articolo vedremo come installare la versione 6.1 del kernel su \textbf{Ubuntu 22.10}, dato che le altre distribuzioni, come Arch Linux, openSUSE Tumbleweed o Fedora Linux ricevono immediatamente il kernel attraverso i loro repository software. Con Ubuntu, invece, occorre fare tutto manualmente. Per fare ciò, utilizzeremo la $\href{https://it.wikipedia.org/wiki/Interfaccia_a_riga_di_comando}{\textsl{CLI}}$ (Command-line interface), insieme ai $\href{https://kernel.ubuntu.com/~kernel-ppa/mainline/}{\textsl{pacchetti del kernel}}$ dall'archivio PPA di Ubuntu, forniti direttamente da Canonical. Con l'unica precisazione che i suddetti pacchetti del kernel, pur essendo creati dall'Ubuntu Kernel Team, non sono firmati, il che significa che non possono essere installati su sistemi che hanno il Secure Boot abilitato. Pertanto, prima di procedere, occorre disabilitare Secure Boot. L'installazione tramite CLI è abbastanza semplice, infatti basterà scaricare, per la propria architettura, i pacchetti del kernel Linux 6.1 e salvarli in una cartella sotto Home. Successivamente, aprire il Terminale e spostarsi nella cartella dove sono salvati i file (ad esempio cd \~/Downloads), ed eseguire il comando:
+
+\begin{verbatim}
+sudo dpkg -i *.deb
+\end{verbatim}
+
+e attendere fino al completamento del processo di installazione e quindi riavviare il computer. Qualora si volesse eseguire l'aggiornamento a future versioni, si dovrà scaricare manualmente i nuovi pacchetti dall'archivio PPA del kernel di Ubuntu e ripetere questa procedura. Il gioco è fatto ;)
+Se si preferisce evitare la linea di comando, si può sempre usare l'utility $\href{https://github.com/bkw777/mainline}{\textsl{Ubuntu Mainline Kernel Installer}}$.\\
+\\
+\textit{Fonte}:\\
+$\href{https://9to5linux.com/you-can-now-install-linux-kernel-6-1-on-ubuntu-heres-ho}{\textsl{9to5linux.com}}$
+
+
+
+\section{Notizie dalla comunità internazionale}
+\subsection{Full Circle Magazine Issue \#188 in inglese}
+È stato pubblicato sul sito internazionale di $\href{http://fullcirclemagazine.org}{\textsl{Full Circle Magazine}}$, il numero 188 in Inglese. In questo numero troviamo:
+
+\begin{itemize}
+\item Comanda e Conquista
+\item How-To: Python e Latex
+\item Grafica: Inkscape
+\item Tutti i giorni Ubuntu
+\item Micro This Micro That
+\item Recensione: Kubuntu 22.10
+\item Recensione: Ubuntu Cinnamon 22.04
+\item Ubports Touch: OTA-24
+\item Giochi Ubuntu: Dwarf Fortress (Steam Edition)
+\end{itemize}
+
+... e molto altro ancora.
+È possibile scaricare la rivista da $\href{http://fullcirclemagazine.org/issue-188}{\textsl{questa pagina}}$.
+
+\subsection{GNOME 42.8: migliora il supporto Wayland}
+Lo sviluppatore del progetto GNOME, Jeremy Bicha, ha annunciato il rilascio dell'ottavo aggiornamento di manutenzione della versione di \textbf{GNOME 42.8}, che è ancora supportata fino a quando la prossima release, ovvero GNOME 44, non arriverà nelle strade: il rilascio dovrebbe avvenire in concomitanza - più o meno - con il debutto di Ubuntu 23.04 che sarà a fine marzo o primi di Aprile. \textbf{GNOME 42.8} è un aggiornamento piuttosto piccolo per coloro che utilizzano il desktop GNOME sulla propria distribuzione GNU/Linux. Tuttavia, tra gli aggiornamenti degni di nota, troviamo una finestra Mutter aggiornata e un gestore delle finestre che disabilita i modificatori del client quando è in uso il driver open source AMDGPU e abilita l'impostazione atomic mode per il driver grafico NVIDIA con supporto GBM.\\
+Anche \textbf{GNOME Shell} è stato aggiornato per evitare di consentire ai popover di Wayland di bloccare la panoramica delle attività e risolvere un problema che era presente nella distribuzione di Fedora Linux 37 Workstation, che interrompeva le acquisizioni di chiavi e il passaggio di chiavi a macchine virtuali o sistemi remoti. Oltre a ciò, \textbf{GNOME 42.8} offre anche un'app GNOME Control Center aggiornata che presenta vari miglioramenti e correzioni alle pagine Account online, Informazioni, Applicazioni, Tastiera, Mouse, Alimentazione, Stampanti, Regione, Cellulare, Utenti, Ricerca, Colore e Rete e Wi-Fi. Proprio su quest'ultima pagina le modifiche più interessanti riguardano, la possibilità di accedere alle impostazioni delle reti Wi-Fi conosciute nella pagina Wi-Fi, una correzione per un arresto anomalo nella pagina Rete durante la disconnessione di un dispositivo Wi-Fi.\\
+Detto questo, tutti gli utenti che utilizzano la serie di ambienti desktop \textbf{GNOME 42} sono incoraggiati a eseguire l'aggiornamento alla versione GNOME 42.8 non appena i pacchetti arrivano nei repository software della proprio distribuzioni GNU/Linux. Al momento, sono previsti altri due aggiornamenti di manutenzione per GNOME 42 prima che raggiunga l'End of Life, vale a dire GNOME 42.9 a metà febbraio e GNOME 42.10 a metà marzo 2023.\\
+\\
+\textit{Fonte}:\\
+$\href{https://9to5linux.com/gnome-42-8-enables-atomic-mode-setting-for-nvidia-gbm-improves-wayland-and-amdgpu-support}{\textsl{9to5linux.com}}$
+
+
+
+\section{Notizie dal Mondo}
+\subsection{Aggiungere l'anteprima Markdown su Gedit}
+Molti penseranno che, da quando è stato sostituito con il nuovo editor di testo di GNOME, \textbf{Gedit} non venga più sviluppato e mantenuto. Ed è qui che si sbaglia, perché Gedit è ancora disponibile nei repository e continua a fungere da editor di testo predefinito nelle versioni di supporto a lungo termine di Ubuntu. Parallelamente, mentre Gedit supporta molti diversi formati quali di programmazione, codice, linguaggi e markup del testo, non supporta purtroppo il Markdown in modo nativo. Ed è per questo che entra in gioco il plug-in \textbf{Gedit Markdown Preview} che permette di aggiungere il supporto Markdown alla versione di Gedit 3.22 e successive. Oltre ad aprire i file con estensione \textsl{.mdfile}, il plug-in aggiunge un pannello di anteprima all'editor di testo in modo da poter visualizzare in tempo reale il proprio codice Markdown. Il pannello di anteprima può essere attivato/disattivato a piacimento, inoltre le caratteristiche dell'anteprima permettono di:
+
+\begin{itemize}
+\item Mostrare l'anteprima Markdown aggiornata dinamicamente;
+\item Zoom avanti/indietro sull'anteprima;
+\item Funzione "Cerca" in anteprima;
+\item Aprire link/immagini;
+\end{itemize}
+
+L'anteprima funziona anche per i file HTML e SVG, quindi se li modifichi in aggiunta o al posto di Markdown, il plug-in può esserti d'aiuto anche lì. Tra le altre cose, si può anche applicare un foglio di stile personalizzato (.css) e utilizzare le estensioni python3-markdown per supportare/aggiungere caratteristiche e funzionalità extra. Per installarlo, basterà $\href{https://github.com/maoschanz/gedit-plugin-markdown_preview/releases}{\textsl{scaricare}}$ l'ultima versione in formato \textsl{.zip} dalla pagina di GitHub, estrarre l'archivio e quindi eseguire il file \textsl{./install.shfile}. Una volta installato il plug-in, andare su \textbf{Gedit $\rightarrow$ Preferenze $\rightarrow$ Plugins} e abilitare il plug-in Markdown Preview. Se si riscontrano errori, ricontrollare di aver installato tutte le dipendenze corrette, incluse \textsl{python3-markdown}, \textsl{gir1.2-webkit2-4.0}, e, se si prevede di utilizzarle, \textsl{pandoc}. L'unica pecca al momento è che il plugin non è ancora stabile al 100\%. Quindi, piccola raccomandazione, utilizzatelo con cautela.\\
+\\
+\textit{Fonte}:\\
+$\href{https://www.omgubuntu.co.uk/2023/01/gedit-markdown-plugin}{\textsl{omgubuntu.co.uk}}$
+
+
+\subsection{LibreOffice 7.4.4 rilasciato con più di 110 correzioni di bug}
+La \textbf{Document Foundation} ha $\href{https://blog.documentfoundation.org/blog/2023/01/12/libreoffice-7-4-4-community/}{\textsl{annunciato}}$ il rilascio e la disponibilità per tutte le piattaforme supportate della quarta point release dell'ultima versione stabile della potente suite per l'ufficio, \textbf{LibreOffice 7.4}. Dopo un mese e mezzo di inteso lavoro da parte degli sviluppatori, la release 7.4.4 scende in campo per risolvere l'esattezza di 110 bug, presenti all'interno di tutti i componenti principali della suite per l'ufficio, inclusi Writer, Calc, Impress e Draw. Queste correzioni permettono di aumentare sempre di più la stabilità e la robustezza della suite, garantendo al contempo una migliore interoperabilità con i formati di documenti proprietari della suite MicroSoft Office, come DOCX, XLSX e PPTX. Pertanto, se all'interno del tuo dispositivo utilizzi la versione di LibreOffice 7.4, dovresti prendere in considerazione l'aggiornamento alla versione 7.4.4 il prima possibile e magari dare anche un'occhiata ai dettagli sulle correzioni di questi bug, disponibili per $\href{https://wiki.documentfoundation.org/Releases/7.4.4/RC1}{\textsl{RC1}}$ e $\href{https://wiki.documentfoundation.org/Releases/7.4.4/RC2}{\textsl{RC2}}$.
+Tuttavia, occorre tenere presente che questa è l'edizione "Community", quindi se hai bisogno di supporto per le distribuzioni aziendali dovresti considerare l'utilizzo della famiglia di applicazioni $\href{https://www.libreoffice.org/download/libreoffice-in-business/}{\textsl{LibreOffice Enterprise}}$ (per maggiori informazioni guarda il numero $\href{https://wiki.ubuntu-it.org/NewsletterItaliana/2021.005#LibreOffice_7.1_Community:_ecco_cosa_c.27.2BAOg_di_nuovo.21}{\textsl{2021.005}}$). \textbf{LibreOffice 7.4.4} è immediatamente disponibile sul $\href{https://www.libreoffice.org/download/}{\textsl{sito ufficiale}}$. I requisiti minimi per i sistemi operativi proprietari sono disponibili nella $\href{https://it.libreoffice.org/supporto/requisiti-sistema/}{\textsl{suddetta pagina}}$; mentre per \textbf{GNU/Linux}, si ricorda principalmente come regola generale che è sempre consigliabile installare LibreOffice utilizzando i metodi di installazione raccomandati dalla propria distribuzione, come ad esempio l'uso dell'\textit{Ubuntu Software Center} per \textbf{Ubuntu}. Gli utenti di LibreOffice, i sostenitori del software libero e i membri della comunità possono supportare The Document Foundation attraverso una $\href{https://www.libreoffice.org/donate}{\textsl{piccola donazione}}$. Le vostre donazioni aiutano \textbf{The Document Foundation} a mantenere la sua infrastruttura, condividere la conoscenza e a finanziare attività delle comunità locali.
+Nel frattempo, la \textbf{Document Foundation} è a lavoro sulla prossima versione principale della suite, LibreOffice 7.5, che porterà nuove funzionalità e miglioramenti. LibreOffice 7.5 dovrebbe arrivare a febbraio 2023.\\
+\\
+\textit{Fonte}:\\
+$\href{https://blog.documentfoundation.org/blog/2023/01/12/libreoffice-7-4-4-community/}{\textsl{blog.documentfoundation.org}}$\\
+$\href{https://9to5linux.com/libreoffice-7-4-4-released-with-more-than-110-bug-fixes-download-now}{\textsl{9to5linux.com}}$
+
+\subsection{Il Kernel Linux 6.0 raggiunge l'End Of Life}
+Tramite un messaggio in mailing list, il noto sviluppatore del Kernel Linux, \textbf{Greg Kroah-Hartman}, ha annunciato l'addio alla serie del \textbf{kernel Linux 6.0}, che da oggi è definitivamente contrassegnata come EOL (End of Life) sul sito $\href{https://www.kernel.org}{\textsl{kernel.org}}$. Rilasciato il 2 ottobre 2022, il kernel 6.0 ha introdotto una serie di nuove funzionalità atte al miglioramento dei livelli di prestazione, ad avere un nuovo supporto hardware e a implementare varie correzioni di sicurezza. Tra le modifiche degne di nota, citiamo gli apprezzabili miglioramenti delle prestazioni tra i processori Intel Xeon "Ice Lake", AMD Ryzen "Threadripper" e AMD EPYC, grazie alle modifiche introdotte allo scheduler, il supporto verso le nuove fasce di hardware in arrivo, come per i chip Xeon di quarta generazione di Intel "Sapphire Rapids" e per i chip "Raptor Lake" di tredicesima generazione. O ancora, i vari miglioramenti alle architetture hardware RISC-V e AArch64 (ARM64), funzionalità nuove e migliorate per i filesystem Btrfs e OverlayFS (per maggiori informazioni vedere il numero della newsletter $\href{https://wiki.ubuntu-it.org/NewsletterItaliana/2022.032#Rilasciato_il_Kernel_Linux_6.0}{\textsl{2022.032}}$).\\
+Detto questo, il kernel Linux 6.0, non essendo un ramo con supporto LTS (Long-Term Support), ha raggiunto l'EoL, il che significa che non verrà più supportato con aggiornamenti di manutenzione e di sicurezza. Per questo motivo i manutentori delle varie distribuzione GNU/Linux e gli utenti che utilizzano la serie di kernel Linux 6.0 sono ora sollecitati ad aggiornare quanto prima il proprio sistema a una versione più recente, come il kernel Linux 6.1. La maggior parte delle distribuzioni a rilascio progressivo come Arch Linux o openSUSE Tumbleweed (e le loro derivate) lo stanno già utilizzando, quindi non dovrebbe essere un problema.\\
+\\
+\textit{Fonte}:\\
+$\href{https://9to5linux.com/linux-kernel-6-0-reaches-end-of-life-users-urged-to-upgrade-to-linux-6-1}{\textsl{9to5linux.com}}$
+
+
+\section{Aggiornamenti e statistiche}
+\subsection{Aggiornamenti di sicurezza}
+Gli annunci di sicurezza sono consultabili nell'apposita $\href{http://forum.ubuntu-it.org/viewforum.php?f=64}{\textsl{sezione del forum}}$.
+
+\subsection{Bug riportati}
+
+\begin{itemize}
+\item Aperti: 140914; 
+\item Critici: 311;
+\item Nuovi: 70599;
+\end{itemize}
+
+È possibile aiutare a migliorare Ubuntu, riportando problemi o malfunzionamenti. Se si desidera collaborare ulteriormente, la $\href{https://wiki.ubuntu.com/BugSquad}{\textsl{Bug Squad}}$ ha sempre bisogno di una mano.
+
+\subsection{Statistiche del gruppo sviluppo}
+Segue la lista dei pacchetti realizzati dal $\href{http://wiki.ubuntu-it.org/GruppoSviluppo}{\textsl{GruppoSviluppo}}$ della comunità italiana nell'ultima settimana:
+
+\begin{itemize}
+\item \textit{Mattia Rizzolo}:
+\begin{itemize}
+\item $\href{https://tracker.debian.org/inkscape}{\textsl{inkscape 1.2.2-2}}$, per Debian unstable
+\item $\href{https://tracker.debian.org/lib2geom}{\textsl{lib2geom 1.2.2-3}}$, per Debian unstable
+\item $\href{https://tracker.debian.org/sigil}{\textsl{sigil 1.9.20+dfsg-2}}$, per Debian unstable
+\item $\href{https://tracker.debian.org/scribus}{\textsl{scribus 1.5.8+dfsg-4}}$, per Debian unstable
+\item $\href{https://launchpad.net/ubuntu/lunar/+source/inkscape/1.2.2-2ubuntu1}{\textsl{inkscape 1.2.2-2ubuntu1}}$, per Ubuntu lunar
+\end{itemize}
+\end{itemize}
+
+Se si vuole contribuire allo sviluppo di Ubuntu correggendo bug, aggiornando i pacchetti nei repository, ecc... il $\href{http://wiki.ubuntu-it.org/GruppoSviluppo}{\textsl{GruppoSviluppo}}$ è sempre alla ricerca di nuovi volontari.
+
+\section{Commenti e informazioni}
+La tua newsletter preferita è scritta grazie al contributo libero e volontario della $\href{http://wiki.ubuntu-it.org/GruppoPromozione/SocialMedia/Crediti}{\textsl{comunità ubuntu-it}}$. In questo numero hanno partecipato alla redazione degli articoli:
+
+\begin{itemize}
+\item $\href{https://wiki.ubuntu-it.org/dd3my}{\textsl{Daniele De Michele}}$
+\item $\href{https://wiki.ubuntu-it.org/essedia1960}{\textsl{Stefano Dall'Agata}}$
+\end{itemize}
+
+Ha inoltre collaborato all'edizione:
+
+\begin{itemize}
+\item $\href{https://wiki.ubuntu-it.org/garakkio}{\textsl{Massimiliano Arione}}$
+\end{itemize}
+
+Ha realizzato il pdf:
+
+\begin{itemize}
+\item $\href{https://wiki.ubuntu-it.org/dd3my}{\textsl{Daniele De Michele}}$
+\end{itemize}
+
+\section{Scrivi per la newsletter}
+La \textbf{Newsletter Ubuntu-it} ha lo scopo di tenere aggiornati tutti gli utenti \textbf{Ubuntu} e, più in generale, le persone appassionate del mondo open-source. Viene resa disponibile gratuitamente con cadenza settimanale ogni Lunedì, ed è aperta al contributo di tutti gli utenti che vogliono partecipare con un proprio articolo. L’autore dell’articolo troverà tutte le raccomandazioni e istruzioni dettagliate all’interno della pagina $\href{https://wiki.ubuntu-it.org/GruppoPromozione/SocialMedia/Newsletter/LineeGuida}{\textsl{Linee Guida}}$, dove inoltre sono messi a disposizione per tutti gli utenti una serie di indirizzi web che offrono notizie riguardanti le principali novità su Ubuntu e sulla comunità internazionale, tutte le informazioni sulle attività della comunità italiana, le notizie sul software libero dall’Italia e dal mondo. Per chiunque fosse interessato a collaborare con la newsletter Ubuntu-it a titolo di redattore o grafico, può scrivere alla $\href{http://liste.ubuntu-it.org/cgi-bin/mailman/listinfo/facciamo-promozione}{\textsl{mailing list}}$ del $\href{http://wiki.ubuntu-it.org/GruppoPromozione}{\textsl{gruppo promozione}}$ oppure sul canale IRC: $\href{https://chat.ubuntu-it.org/#ubuntu-it-promo}{\textsl{$\#$ubuntu-it-promo}}$. Fornire il tuo contributo a questa iniziativa come membro, e non solo come semplice utente, è un presupposto fondamentale per aiutare la diffusione di Ubuntu anche nel nostro paese. Per rimanere in contatto con noi, puoi seguirci su:
+
+\begin{figure}[!h]
+\centering
+\subfloat[][\emph{$\href{https://www.facebook.com/ubuntu.it}{\textsl{Facebook}}$}]
+	{\includegraphics[width=.12\textwidth]{immagini/Facebook.png}} \qquad
+\subfloat[][\emph{$\href{https://twitter.com/ubuntuit}{\textsl{Twitter}}$}]
+	{\includegraphics[width=.15\textwidth]{immagini/Twitter.png}} \qquad
+\subfloat[][\emph{$\href{https://youtube.com/ubuntuitpromozione}{\textsl{YouTube}}$}]
+	{\includegraphics[width=.15\textwidth]{immagini/YouTube.png}} \qquad
+\subfloat[][\emph{$\href{https://telegram.me/ubuntuit}{\textsl{Telegram}}$}]
+	{\includegraphics[width=.12\textwidth]{immagini/Telegram.png}} \qquad
+\end{figure}
+
+\begin{flushright}
+"Noi siamo ciò che siamo per\\
+merito di ciò che siamo tutti"
+\end{flushright}
+
+\clearpage
+\thispagestyle{empty}
+\begin{center}
+Questa newsletter è stata prodotta dal\\
+Gruppo Social Media usando esclusivamente\\
+software libero.		
+\end{center}
+
+
+
+
+
+
+
+
+
+
+
+
+\end{document}
+
+
+\frontmatter
+\mainmatter
+
+
+
