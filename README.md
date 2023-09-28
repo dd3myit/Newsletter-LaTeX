@@ -20,7 +20,7 @@ Il progetto LaTeX utilizzato per la newsletter Ubuntu-it è un esempio eccellent
 I principali contributori del codice sono:
 
 - Mattia Rizzolo [`@mapreri`](https://github.com/mapreri)
-- Vincenzo Tibullo 
+- Vincenzo Tibullo [`@enzo-project`](https://github.com/enzo-project)
 
 ## License
 Attribuzione Creative Commons 4.0	/ cc-by-4.0
